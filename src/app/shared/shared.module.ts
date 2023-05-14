@@ -12,6 +12,7 @@ import { AlertComponent } from './alert/alert.component';
   imports: [
     CommonModule,
     SharedRoutingModule
-  ]
+  ],
+  exports:[AlertComponent]
 })
 export class SharedModule { }
