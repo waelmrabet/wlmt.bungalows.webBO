@@ -31,11 +31,35 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",              
+              "src/utils/plugins/fontawesome-free/css/all.min.css",
+              "src/utils/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css",
+              "src/utils/plugins/icheck-bootstrap/icheck-bootstrap.min.css",
+              "src/utils/plugins/jqvmap/jqvmap.min.css",
+              "src/utils/dist/css/adminlte.min.css",
+              "src/utils/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "src/utils/plugins/daterangepicker/daterangepicker.css",
+              "src/utils/plugins/summernote/summernote-bs4.min.css",
+
             ],
             "scripts": [
+
               "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "./node_modules/jquery-ui/dist/jquery-ui.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "./node_modules/chart.js/dist/Chart.min.js",
+             
+              "./node_modules/sparkline/lib/sparkline.js",
+              "./node_modules/jqvmap/dist/jquery.vmap.min.js",
+              "./node_modules/jqvmap/dist/maps/jquery.vmap.usa.js",
+              "./node_modules/jquery-knob/dist/jquery.knob.min.js",
+
+              "./node_modules/moment/min/moment.min.js",
+              "./node_modules/daterangepicker/daterangepicker.js",  
+              "./node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js",
+              "./node_modules/summernote/dist/summernote-bs4.min.js"            
+              
+             
             ]
           },
           "configurations": {

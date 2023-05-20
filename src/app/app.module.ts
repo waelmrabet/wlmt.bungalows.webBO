@@ -10,6 +10,7 @@ import { AlertComponent } from './shared/alert/alert.component';
 import { AddEditComponent } from './features/user/add-edit/add-edit.component';
 import { LayoutComponent } from './features/user/layout/layout.component';
 import { ListComponent } from './features/user/list/list.component';
+import * as $ from "jquery";
 
 
 // used to create fake backend
