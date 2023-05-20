@@ -7,9 +7,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './helpers';
 import { AlertComponent } from './shared/alert/alert.component';
+import { AddEditComponent } from './features/user/add-edit/add-edit.component';
+import { LayoutComponent } from './features/user/layout/layout.component';
+import { ListComponent } from './features/user/list/list.component';
+
 
 // used to create fake backend
-
 @NgModule({
     imports: [
         BrowserModule,
@@ -20,7 +23,10 @@ import { AlertComponent } from './shared/alert/alert.component';
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent
+        HomeComponent,
+        LayoutComponent,
+        AddEditComponent,
+        ListComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
