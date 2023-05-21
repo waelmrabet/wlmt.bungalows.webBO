@@ -10,7 +10,6 @@ import { AlertComponent } from './shared/alert/alert.component';
 import { AddEditComponent } from './features/user/add-edit/add-edit.component';
 import { LayoutComponent } from './features/user/layout/layout.component';
 import { ListComponent } from './features/user/list/list.component';
-import * as $ from "jquery";
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MainSideBarComponent } from './components/main-side-bar/main-side-bar.component';
 import { DashbordComponent } from './components/dashbord/dashbord.component';
