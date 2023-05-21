@@ -31,16 +31,15 @@
             ],
             "styles": [
               "src/styles.scss",
+              "src/assets/dist/css/adminlte.min.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",              
-              "src/utils/plugins/fontawesome-free/css/all.min.css",
-              "src/utils/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css",
-              "src/utils/plugins/icheck-bootstrap/icheck-bootstrap.min.css",
-              "src/utils/plugins/jqvmap/jqvmap.min.css",
-              "src/utils/dist/css/adminlte.min.css",
-              "src/utils/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
-              "src/utils/plugins/daterangepicker/daterangepicker.css",
-              "src/utils/plugins/summernote/summernote-bs4.min.css",
-
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "./node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css",
+              "./node_modules/icheck-bootstrap/icheck-bootstrap.min.css",              
+              "./node_modules/jqvmap/dist/jqvmap.min.css",                           
+              "./node_modules/overlayScrollbars/styles/OverlayScrollbars.min.css",
+              "./node_modules/daterangepicker/daterangepicker.css",
+              "./node_modules/summernote/dist/summernote-bs4.min.css"
             ],
             "scripts": [
 
