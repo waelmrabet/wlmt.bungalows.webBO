@@ -1,3 +1,24 @@
 <!--<app-alert></app-alert>-->
-<router-outlet></router-outlet>
+<!---->
 
+<!-- Preloader -->
+<div class="preloader flex-column justify-content-center align-items-center">
+  <img class="animation__shake" src="../../../assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+    width="60">
+</div>
+
+<!-- Navbar -->
+<app-nav-bar *ngIf="user"></app-nav-bar>
+<!-- /.navbar -->
+
+<!-- Main Sidebar Container -->
+<app-main-side-bar *ngIf="user"></app-main-side-bar>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <router-outlet></router-outlet>
+</div>
+
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
