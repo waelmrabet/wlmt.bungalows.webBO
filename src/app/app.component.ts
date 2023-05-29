@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import * as $ from "jquery";
-import { AccountService } from './services/account.service';
+import { AuthenticationService } from './services/authentication.service';
 import { User } from './models';
 import { Router } from '@angular/router';
 
@@ -13,9 +13,11 @@ export class AppComponent {
   title = 'wlmt.bungalows.webBO';
   public user: User | undefined;
 
-  constructor(private accountService: AccountService, private router: Router,){
+  constructor(private authService: AuthenticationService, private router: Router,){
+
+   
     
-    this.accountService.user.subscribe(currentUser => {
+    this.authService.user.subscribe(currentUser => {
       if(currentUser)
         this.user = currentUser;
       else{
@@ -24,4 +26,6 @@ export class AppComponent {
       }
     })
   }
+
+  
 }

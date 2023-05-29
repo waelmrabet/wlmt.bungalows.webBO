@@ -13,8 +13,24 @@
     </li>
   </ul>
 
-  <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+
+      <a class="nav-link" (click)="logout()">
+        <span>
+            <em class="fas fa-sign-out-alt" aria-hidden="true"></em>                        
+        </span>
+        <span>
+            Se déconnecter
+        </span>
+    </a>
+
+
+    </li>
+  </ul>
+
+  <!-- Right navbar links -->
+  <ul class="navbar-nav ml-auto" *ngIf="false">
     <!-- Navbar Search -->
     <li class="nav-item">
       <a class="nav-link" data-widget="navbar-search" href="#" role="button">

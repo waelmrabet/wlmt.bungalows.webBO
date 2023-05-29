@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
-import { AccountService } from 'src/app/services/account.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import { AlertService } from 'src/app/services/alert.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-add-edit',
@@ -22,8 +23,9 @@ export class AddEditComponent implements OnInit {
       private formBuilder: FormBuilder,
       private route: ActivatedRoute,
       private router: Router,
-      private accountService: AccountService,
-      private alertService: AlertService
+      private authService: AuthenticationService,
+      private alertService: AlertService,
+      private userService: UserService
   ) { }
 
   ngOnInit() {
@@ -43,7 +45,7 @@ export class AddEditComponent implements OnInit {
           // edit mode
           this.title = 'Edit User';
           this.loading = true;
-          this.accountService.getById(this.id)
+          this.userService.getById(this.id)
               .pipe(first())
               .subscribe(x => {
                   this.form.patchValue(x);
@@ -84,7 +86,7 @@ export class AddEditComponent implements OnInit {
   private saveUser() {
       // create or update user based on id param
       return this.id
-          ? this.accountService.update(this.id!, this.form.value)
-          : this.accountService.register(this.form.value);
+          ? this.userService.update(this.id!, this.form.value)
+          : this.userService.register(this.form.value);
   }
 }

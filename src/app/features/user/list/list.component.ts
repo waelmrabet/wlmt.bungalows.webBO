@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
-import { AccountService } from 'src/app/services/account.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-list',
@@ -10,10 +11,10 @@ import { AccountService } from 'src/app/services/account.service';
 export class ListComponent implements OnInit {
   users?: any[];
 
-  constructor(private accountService: AccountService) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
-      this.accountService.getAll()
+      this.userService.getAll()
           .pipe(first())
           .subscribe(users => this.users = users);
   }
@@ -21,8 +22,9 @@ export class ListComponent implements OnInit {
   deleteUser(id: string) {
       const user = this.users!.find(x => x.id === id);
       user.isDeleting = true;
-      this.accountService.delete(id)
+      this.userService.delete(id)
           .pipe(first())
           .subscribe(() => this.users = this.users!.filter(x => x.id !== id));
   }
+  
 }
